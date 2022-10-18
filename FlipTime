@@ -1,0 +1,23 @@
+#!/bin/bash
+
+
+echo "We will be playing heads or tails"
+sleep 2
+clear
+echo -p "Choose heads or tails" Choose
+if [ $Choose != "heads"] && [ $Choose != "tails" ]; then
+    echo "Please choose one of the options [ heads/tails ]"
+    exit
+fi
+
+
+sleep 1
+FLIP=$(($RANDOM%2))
+for random in $FLIP; do
+    if [ $FLIP == 0 ]; then
+        echo "You've got Tails!"
+    elif [ $FLIP == 1 ]; then
+        echo "You've got Heads!"
+    fi
+done
+
